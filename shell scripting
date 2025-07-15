@@ -1,0 +1,28 @@
+#!/bin/bash 
+#! is shebhang
+set -x #debug
+
+date | echo "hi"  -> output will be hi as date is system default command and it sends the output to stdin, pipe cannot get the information from stdin.
+
+ps -ef | grep amazon  -> lists process with amazon in  it
+
+awk command can give the specific column from the output
+ps -ef | grep amazon | awk -F" " '{prinmt $2}'
+
+
+
+grep name filename -> prints the line with name in it
+grep name filename | awk -F" " '{print $4}'
+
+while using pipe below are used
+set -e   -> exit the script when there is an error
+set -o pipefail  -> set -e only looks for the last command after pipe, means even if the commands before the last pipe are wrong it wont give any error, therefore whenerver set -e is used use set -o pipefail also to avoid this.
+
+curl http://logfilepath | grep ERROR
+
+curl -X GET  API
+
+
+WGET command downloads the file
+
+find command
