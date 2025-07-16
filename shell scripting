@@ -26,3 +26,4 @@ curl -X GET  API
 WGET command downloads the file
 
 find command
+find / -name pam -> finds the files with the name pam
